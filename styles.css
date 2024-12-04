@@ -1,0 +1,184 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRor9xXs638StPXn6i6zaSdC0gyKcRcccFIdA&s');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Hafif şeffaflık */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Taşmayı engellemek için */
+    box-sizing: border-box; /* Padding ve sınırları dahil eder */
+}
+
+h1 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #666;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+form label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #444;
+}
+
+form input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f9f9f9;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+form input:focus {
+    background: #fff;
+    border-color: #007bff;
+    outline: none;
+}
+
+form button {
+    padding: 8px 20px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+textarea {
+    width: 100%;
+    height: 400px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 1.6;
+    resize: none;
+    background-color: #ffffffcc; /* Hafif şeffaf arka plan */
+    text-align: justify;
+    color: #333;
+    box-sizing: border-box; /* Padding taşmasını engeller */
+    overflow: auto; /* Çok büyük metinlerde kaydırma çubuğu ekler */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+textarea:hover {
+    background-color: #fff;
+    border-color: #aaa;
+}
+
+.firms {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.firm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.firm:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.firm img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 5px;
+}
+
+.firm p {
+    font-size: 14px;
+    color: #444;
+}
+
+.donate-section {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#donate-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#donate-btn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+#terra-logo {
+    width: 120px; /* Logonun genişliği */
+    height: 120px; /* Logonun yüksekliği */
+    margin: 10px auto; /* Ortalamak için */
+    display: none; /* Başlangıçta gizli */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Opaklık efekti ekler */
+    cursor: pointer;
+    border-radius: 50%; /* Logoyu yuvarlak hale getirir */
+    border: 2px solid #fff; /* İnce beyaz bir çerçeve ekler */
+    opacity: 0; /* Başlangıçta şeffaf */
+}
+
+#terra-logo.show {
+    opacity: 1; /* Görünür hale getirir */
+    display: block; /* Logoyu görüntüler */
+}
+
+
+#created-by {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+    font-weight: bold;
+    text-align: center;
+}

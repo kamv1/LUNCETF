@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUNC ETF Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>LUNC ETF Application Letter</h1>
+        <p>Fill out the form below. Your details will be automatically inserted into the template. Click on the institution icons to copy their email addresses.</p>
+
+        <!-- Form Section -->
+        <form id="user-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="address">Your Address:</label>
+            <input type="text" id="address" placeholder="Enter your address" required>
+
+            <label for="city-state-zip">City, State, ZIP Code:</label>
+            <input type="text" id="city-state-zip" placeholder="City, State, ZIP Code" required>
+
+            <label for="contact">Contact Information:</label>
+            <input type="text" id="contact" placeholder="Your email or phone number" required>
+
+            <button type="button" onclick="updateTemplate()">Update Template</button>
+        </form>
+
+        <!-- Letter Template -->
+        <textarea id="letter-template" readonly onclick="copyToClipboard(document.getElementById('letter-template').value)">
+Subject: Request for the Launch of a #LUNCETF
+
+[Your Name]
+[Your Address]
+[City, State, ZIP Code]
+[Date]
+
+To Whom It May Concern,
+
+I am writing to express my strong support and interest in the creation of an ETF focused on Terra Luna Classic (#LUNC). As a dedicated member of the global cryptocurrency community and an investor who values innovation, I firmly believe that a #LUNCETF would be a transformative step for both the ecosystem and the broader market.
+
+The Terra Luna Classic project has proven itself to be more than a cryptocurrency—it is a symbol of resilience, innovation, and community-driven growth. The introduction of an ETF would not only boost liquidity and accessibility but also align with the growing demand for transparent and regulated investment options within the crypto space.
+
+A #LUNCETF would offer:
+
+- Increased investor confidence by providing a regulated investment product.
+- Enhanced visibility and adoption of $LUNC on a global scale.
+- A unique opportunity to amplify its burn mechanism, contributing to long-term value creation.
+
+The cryptocurrency industry is evolving rapidly, and ETFs are becoming a critical part of bridging traditional finance with decentralized technology. By launching a #LUNCETF, your company has the opportunity to lead this movement and set a new standard for innovation and growth.
+
+I urge you to consider this proposal and take action toward making a #LUNCETF a reality. The potential benefits for both your company and the cryptocurrency ecosystem are immense, and the community would wholeheartedly support this initiative.
+
+Thank you for your time and attention to this matter. I look forward to seeing your leadership in advancing the future of decentralized finance.
+
+Sincerely,
+[Your Name]
+[Contact Information]
+        </textarea>
+
+        <!-- Firms Section -->
+        <div class="firms">
+            <div class="firm" onclick="copyToClipboard('info@blackrock.com')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcmiGZCYR_XUIdW7VLiE-E8SbDFCnqqQiUuA&s" alt="BlackRock">
+                <p>BlackRock</p>
+            </div>
+            <div class="firm" onclick="copyToClipboard('contact@fidelity.com')">
+                <img src="https://assets-002.noviams.com/novi-file-uploads/splc/members/fidelity-1.png" alt="Fidelity Investments">
+                <p>Fidelity Investments</p>
+            </div>
+            <div class="firm" onclick="copyToClipboard('info@vaneck.com')">
+                <img src="https://getlogovector.com/wp-content/uploads/2020/03/vaneck-logo-vector.png" alt="VanEck">
+                <p>VanEck</p>
+            </div>
+            <div class="firm" onclick="copyToClipboard('info@wisdomtree.com')">
+                <img src="https://pbs.twimg.com/profile_images/1524799888432713728/DA-5oZ3T_400x400.jpg" alt="WisdomTree">
+                <p>WisdomTree</p>
+            </div>
+            <div class="firm" onclick="copyToClipboard('info@ark-invest.com')">
+                <img src="https://pbs.twimg.com/profile_images/1189207021146509313/yvzyuloD_400x400.jpg" alt="ARK Invest">
+                <p>ARK Invest</p>
+            </div>
+            <div class="firm" onclick="copyToClipboard('info@bitwiseinvestments.com')">
+                <img src="https://media.licdn.com/dms/image/v2/C4D0BAQG_5lhdEzxtlw/company-logo_200_200/company-logo_200_200/0/1641221288798/bitwise_asset_management_logo?e=2147483647&v=beta&t=A794NGvb6VGEQM8zxJcGG4G0R3rZWuNhyI2-x0r5OFY" alt="Bitwise Asset Management">
+                <p>Bitwise Asset Management</p>
+            </div>
+            <div class="firm" onclick="copyToClipboard('info@grayscale.co')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGYiCQQbon4t0QOoEDTZ0t1nqR_hfxP9vSYg&s" alt="Grayscale Investments">
+                <p>Grayscale Investments</p>
+            </div>
+            <div class="firm" onclick="copyToClipboard('info@invesco.com')">
+                <img src="https://logowik.com/content/uploads/images/invesco-corporate781.logowik.com.webp" alt="Invesco">
+                <p>Invesco</p>
+            </div>
+            <div class="firm" onclick="copyToClipboard('info@valkyrieinvest.com')">
+                <img src="https://valkyrieinvest.com/wp-content/uploads/Logos/Blue/PNG/Valkyrie-V-Icon-Blue.png" alt="Valkyrie Investments">
+                <p>Valkyrie Investments</p>
+            </div>
+            <div class="firm" onclick="copyToClipboard('info@globalxetfs.com')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7-9BSe0-J2Co-VMTrtRdkEMUslN7JjmyGlA&s" alt="Global X">
+                <p>Global X</p>
+            </div>
+            <div class="firm" onclick="copyToClipboard('info@hashdex.com')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6VFlXXf7XvkKAvwbtVV5iIO6A4Emc55aypA&s" alt="Hashdex">
+                <p>Hashdex</p>
+            </div>
+            <div class="firm" onclick="copyToClipboard('info@franklintempleton.com')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQe_61GNL-GTvRjQeBdmc5C6CyRczbYLjrOg&s" alt="Franklin Templeton">
+                <p>Franklin Templeton</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Donation Section -->
+    <div class="donate-section">
+        <button id="donate-btn">Donate</button>
+        <img id="terra-logo" src="https://pbs.twimg.com/profile_images/1861121755303018496/zhwr11BU_400x400.jpg" alt="Terra Classic" onclick="copyWalletAddress()">
+        <p id="created-by">Created by KAM</p>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
